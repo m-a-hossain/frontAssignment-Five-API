@@ -1,0 +1,54 @@
+.main{
+    display: grid;
+    
+
+    margin: 0;
+    padding: 50px;
+}
+.nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    border: .5px solid;
+    padding: 20px;
+}
+.form{
+   
+    display: flex;
+    justify-content: center;
+}
+.input{
+    display: flex;
+    flex-basis: 80%;
+    padding: 10px;
+}
+.btn{display: flex;
+    flex-basis: 20%;
+    padding: 10px;
+}
+.section{   
+  
+   
+    padding: 30px 100px;
+}
+.item{
+    display: grid;
+    grid-gap: 30px; 
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+   
+}
+.item >li{
+    display: grid;
+    height: 250px;
+    border: .5px solid;
+    border-radius: 20px;
+    padding: 5px;
+}
+.item >li:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+.item p{text-align: center;
+           color: rgb(231, 112, 26); }
