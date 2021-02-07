@@ -1,11 +1,13 @@
 /* const searchFood= document.getElementById('inputItem')
 const searchBtn=document.getElementById('search') */
+const searchFood= document.getElementById('inputItem')
+const searchBtn=document.getElementById('search')
  searchBtn.addEventListener('click', findFood)
 
 // create function for fetching foods
 function findFood(){
-  const searchFood= document.getElementById('inputItem')
-const searchBtn=document.getElementById('search')
+  
+
      let foodName= searchFood.value.trim()
 
       fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${foodName}`)
@@ -34,7 +36,7 @@ const searchBtn=document.getElementById('search')
    });
  })
   
- const searchFood= document.getElementById('inputItem').value =""
+ 
 }
  // create function for display food ingredient in a modal
 const getId = id=>{
