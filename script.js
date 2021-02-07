@@ -34,7 +34,7 @@ const searchBtn=document.getElementById('search')
    });
  })
   
-
+ const searchFood= document.getElementById('inputItem').value =""
 }
  // create function for display food ingredient in a modal
 const getId = id=>{
