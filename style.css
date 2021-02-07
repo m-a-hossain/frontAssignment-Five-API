@@ -32,23 +32,97 @@
    
     padding: 30px 100px;
 }
-.item{
+#ul{
     display: grid;
     grid-gap: 30px; 
     grid-template-columns: repeat(4,1fr);
     justify-content: center;
    
 }
-.item >li{
+#ul>li{
     display: grid;
     height: 250px;
     border: .5px solid;
     border-radius: 20px;
     padding: 5px;
 }
-.item >li:hover{
+#ul >li:hover{
     opacity: .6;
     cursor: pointer;
 }
-.item p{text-align: center;
-           color: rgb(231, 112, 26); }
+li img{
+    border-radius: 30px;
+}
+#ul p{text-align: center;
+           color: rgb(231, 112, 26); 
+        }
+
+ #display{display: none;}
+
+ #cancel-btn{position: relative;
+      font-size: 30px;
+    
+      margin-left: 20px;
+      border: .5px solid;
+      border-radius: 50%;
+ }
+#cancel-btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+ 
+    /* ----------- */
+    
+
+ #modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(214, 203, 203);
+    background-color: rgba(233, 177, 177, 0.8);
+    z-index: 1;
+}
+#content{
+    padding: 10px;
+    margin-top: 15%;
+    margin-left:35%;
+    width: 20%;
+    height: auto;
+    border: var(--border);
+    background-color:white;
+}
+
+  /*  .log-modal-content>table tr{
+    border:.5px solid rgb(59, 21, 21);
+    padding:15px;
+    font-size: 14px;
+       width: 100%;margin: 0 auto;
+   
+   }
+   .log-modal-content  td{
+  width: 100%; float: right;
+  padding: 5px 10px;
+  text-align: right;
+   }
+   .log-modal-content  td{
+    width: 50%; 
+    padding: 5px 10px;
+    text-align: center;
+     }
+   #checkOut{
+       padding: 5px;
+       width: 100%;
+       background-color:green;
+   }
+   #cancel-btn{
+    padding: 5px;
+       width: 100%;
+       background-color:red;
+       color: white;
+   } */
