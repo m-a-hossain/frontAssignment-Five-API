@@ -6,11 +6,10 @@ const searchBtn=document.getElementById('search')
 function findFood(){
      let foodName= searchFood.value.trim()
 
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${foodName}`)
-    .then(res => res.json())
-    .then(data=> {
-      const foodDAta=data.meals
-  
+      fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${foodName}`)
+      .then(res => res.json())
+      .then(data=> {
+        const foodDAta=data.meals
       foodDAta.forEach(element => { 
         let id=element.idMeal
         let thumbImg= element.strMealThumb
@@ -30,8 +29,10 @@ function findFood(){
           img.setAttribute("width", "100%");
           ul.appendChild(li)
             
-  });
-})
+   });
+ })
+  
+
 }
  // create function for display food ingredient in a modal
 const getId = id=>{
