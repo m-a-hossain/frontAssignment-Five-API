@@ -79,13 +79,66 @@ const getId = id=>{
  })
  
 }
-
+// function for closing modal 
 function dispalyClose(){
   var closeModal=  document.getElementById('modal').style.display='none'
  return closeModal
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------- brake-down code--------------------------------- */
 
 /* const searchFood= document.getElementById('inputItem')
 const searchBtn=document.getElementById('search')
