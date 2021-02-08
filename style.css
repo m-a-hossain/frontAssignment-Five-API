@@ -1,7 +1,5 @@
 .main{
     display: grid;
-    
-
     margin: 0;
     padding: 50px;
 }
@@ -27,18 +25,17 @@
     flex-basis: 20%;
     padding: 10px;
 }
-.section{   
-  
-   
+.section{ 
     padding: 30px 100px;
 }
+
 #ul{
     display: grid;
     grid-gap: 30px; 
     grid-template-columns: repeat(4,1fr);
     justify-content: center;
-   
 }
+
 #ul>li{
     display: grid;
     height: auto;
@@ -50,20 +47,23 @@
 #ul >li:hover{
     opacity: .6;
     cursor: pointer;
+    
 }
-li{
+#ul li p:hover{
+    color: rgb(56, 11, 11);
+    
 }
+
 li img{
     border-radius: 30px;
 }
 #ul p{text-align: center;
-           color: rgb(231, 112, 26); 
+           color: rgb(119, 57, 12); 
         }
 
 #display{display: none;}
 
- 
-    /* ----------- */
+ /* --------------modal------- */
     
 
  #modal{
@@ -93,15 +93,25 @@ li img{
 }
 #cancel-btn{position: relative;
     font-size: 30px;
-  
+    z-index: 2;
     margin-left: 20px;
     border: .5px solid;
     border-radius: 50%;
+    position: relative;
+    left: 53%;
+    top:33%;
 }
 #cancel-btn:hover{
     cursor: pointer;
     background-color: black;
     color: white;
 }
+/* ---not found function style */
+#notFound{
+    display: none;
+    margin: 0 auto;
+    color: brown;
+}
+
 
 

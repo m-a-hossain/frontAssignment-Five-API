@@ -11,43 +11,54 @@
     <div class="main">
         <div class="nav">
             <div>
-             
+             <!-- null div for grid -->
             </div>
-                <div class="form">
-                  <input id="inputItem" class="input" type="text" autocomplete="off">
+            <div class="form">
+                  <input id="inputItem" class="input" type="text" autocomplete="off" placeholder="search !! beef, egg, ... chicken! or else..">
                   <button onclick="searchFood()" id="search" class="btn">Search</button>
-                </div>
-                <div>
-                 
-                </div>
+            </div>
+            <div>
+                 <!-- null div for grid -->
+            </div>
         </div>
         <hr>
+        <!-- showing all food in ul -->
       <div class="section">
         <div id="ul">
        
         </div>
 
+      </div>
+
+      <!-- if not data match show nothing  -->
+      <div id="notFound">
+        <h2>Nothing Found !! please Try again</h2>
+      </div>
+</div>
+
+
+
+<!---------- modal for display ingredients and image-------------- -->
+
+<div class="meal" id="modal">
+  <span id="cancel-btn">X</span>
+    <div class="modal-contant" id="content">
+   
+
     </div>
 </div>
-<!-- modal for display ingrediant -->
-<div class="meal" id="modal">
- 
-  <div class="modal-contant" id="content">
-   <span id="cancel-btn">X</span>
 
-  </div>
 
-</div>
  <script src="./script.js"></script>
 <script>
 function displayModal(){
-  document.getElementById('modal').style.display='block'
- // console.log(id)
+  document.getElementById('modal').style.display='block';
+ 
 } 
 const btn=document.getElementById('cancel-btn')
 
-  btn.addEventListener('click',function(){
-     document.getElementById('modal').style.display='none'
+    btn.addEventListener('click',function(){
+     document.getElementById('modal').style.display='none';
   })
  
  
