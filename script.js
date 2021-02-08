@@ -1,14 +1,147 @@
-/* const searchFood= document.getElementById('inputItem')
-const searchBtn=document.getElementById('search') */
-const searchFood= document.getElementById('inputItem')
+    
+    
+    const searchFood =()=>{
+    const searchItem= document.getElementById('inputItem').value
+    const url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem}`
+      if(searchItem ==" " || searchItem < 0){
+        alert('nothing foung');
+        return false
+      }else if(searchItem.indexOf(searchItem.url) !== -1){
+       alert('not match')
+       return false
+      }{
+
+
+    /*  const url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem}` */
+     //https://www.themealdb.com/api/json/v1/1/search.php?f=a
+        
+           // console.log(url)
+
+           fetch(url)
+           .then(response => response.json())
+           .then(data =>{
+             //console.log(result)
+             displayFoods(data.meals)
+            // nameValidation(data.meals)
+           })
+         }
+    
+      const displayFoods =foods=>{
+        const ul =document.getElementById('ul')
+        foods.forEach(foods => {
+          // console.log(foods.idMeal)
+           //console.log(foods.strMeal)
+           //console.log(foods.strMealThumb)
+          let foodId=foods.idMeal
+           const foodName=foods.strMeal
+           const foodImg =foods.strMealThumb
+           const li= document.createElement('li')
+           
+           li.innerHTML=`<li onclick=" getId(${foodId})">
+           <img  src="${foodImg}" width="100%" height="220">
+           <p>${foodName}</p>
+           </li>`
+          ul.appendChild(li)
+           
+          li.addEventListener('click',displayModal);
+          // getId(`${foodId}`)
+            // getId('${foodId}')
+        });
+      
+      } 
+    
+    }
+   // onclick="getId($this{foodId})
+    const getId = id=>{
+ 
+      const url= `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+
+      fetch(url)
+      .then(response => response.json())
+      .then(result =>{
+
+         const modalContent=document.getElementById('content')
+        // const li= document.createElement('li')
+        // const header= document.getElementsByTagName('p')
+        //document.getElementById('modal').style.display='block'
+       // let close= document.getElementById('cancel-btn')
+        //close.setAttribute('onclick', 'dispalyClose()')
+        let getDataItem= result.meals[0]
+        let getImg= getDataItem.strMealThumb
+        let getName= getDataItem.strMeal
+         let foodIngredient= [getDataItem.strIngredient1,getDataItem.strIngredient2,getDataItem.strIngredient3,getDataItem.strIngredient4,getDataItem.strIngredient5]
+          
+         const li= document.createElement('li')
+         li.innerHTML=` <img src="${getImg}" alt="" width="100%" height="220">
+         <h3>${getName}</h3>
+         `
+         modalContent.appendChild(li)
+         // modalContent=document.getElementById('content')
+         foodIngredient.forEach(foodIngra =>{
+           const ul=document.createElement('ul')
+         const newLI=  document.createElement('li')
+         newLI.innerText =foodIngra
+         ul.appendChild(newLI)
+        modalContent.appendChild(ul)
+         })
+       // console.log(getImg, getName,foodIngredient)
+     
+      })
+    }
+
+/*      const getDetailsIngredients= (id) =>{
+            const urlId =`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+           // console.log(url)
+           fetch(urlId)
+           .then(response => response.json())
+           .then(items =>{
+             //console.log(result)
+             console.log(items.meals)
+            // nameValidation(data.meals)
+           })
+         }
+      */
+   
+ 
+ /*    */
+    //const nameValidation= name =>{
+    //  name.forEach(name =>{
+       // console.log(name.strMeal)
+     //  const getName =name.strMeal
+      // return getName
+     // })
+       
+   // } */ */
+/* function validate(searchItem){
+  const numbers = /^[0-9]+$/;
+      if(searchItem.Match(numbers))
+      {
+      alert('Your Registration number has accepted....');
+      //document.form1.text1.focus();
+      return true;
+      }
+      else
+      {
+      alert('Please input numeric characters only');
+      //document.form1.text1.focus();
+      return false;
+      }
+}
+ */
+
+
+
+
+/* 
+let searchFood= document.getElementById('inputItem')
 const searchBtn=document.getElementById('search')
  searchBtn.addEventListener('click', findFood)
 
 // create function for fetching foods
 function findFood(){
-  
 
      let foodName= searchFood.value.trim()
+    // searchFood= document.getElementById('inputItem').value=""
 
       fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${foodName}`)
       .then(res => res.json())
@@ -22,7 +155,7 @@ function findFood(){
         let li =document.createElement('li')
         li.setAttribute('id',`${id}`)
         li.setAttribute('class','meal')
-        li.setAttribute('onclick',`getId('${id}')`)
+        li.setAttribute('onclick','getId(this.id)')
         let para =document.createElement('p')
         para.innerText=fName
         let img =document.createElement('img')
@@ -87,14 +220,14 @@ const getId = id=>{
 }
 // function for closing modal 
 function dispalyClose(){
-  var closeModal=  document.getElementById('modal').style.display='none'
- return closeModal
+  document.getElementById('modal').style.display='none'
+ 
 }
 
 
 
 
-
+ */
 
 
 

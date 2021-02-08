@@ -41,14 +41,17 @@
 }
 #ul>li{
     display: grid;
-    height: 250px;
+    height: auto;
     background-color: silver;
     border-radius: 20px;
     padding: 5px;
+    list-style-type: none;
 }
 #ul >li:hover{
     opacity: .6;
     cursor: pointer;
+}
+li{
 }
 li img{
     border-radius: 30px;
@@ -85,6 +88,9 @@ li img{
     background-color:white;
 }
 
+#content li{
+    list-style-type: none;
+}
 #cancel-btn{position: relative;
     font-size: 30px;
   

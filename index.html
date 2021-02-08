@@ -15,7 +15,7 @@
             </div>
                 <div class="form">
                   <input id="inputItem" class="input" type="text" autocomplete="off">
-                  <button id="search" class="btn">Search</button>
+                  <button onclick="searchFood()" id="search" class="btn">Search</button>
                 </div>
                 <div>
                  
@@ -24,8 +24,7 @@
         <hr>
       <div class="section">
         <div id="ul">
-  
-
+       
         </div>
 
     </div>
@@ -41,8 +40,70 @@
 </div>
  <script src="./script.js"></script>
 <script>
+function displayModal(){
+  document.getElementById('modal').style.display='block'
+ // console.log(id)
+} 
+const btn=document.getElementById('cancel-btn')
+
+  btn.addEventListener('click',function(){
+     document.getElementById('modal').style.display='none'
+  })
+ 
+ 
+
 
   
 </script> 
 </body>
 </html>
+
+<!-- ----------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+   
+    <title>Assignment Five : API calling</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div>
+             
+            </div>
+                <div class="form">
+                  <input id="inputItem" class="input" type="text" autocomplete="off">
+                  <button id="search" class="btn">Search</button>
+                </div>
+                <div>
+                 
+                </div>
+        </div>
+        <hr>
+      <div class="section">
+        <div id="ul">
+  
+
+        </div>
+
+    </div>
+</div>
+ modal for display ingrediant 
+<div class="meal" id="modal">
+ 
+  <div class="modal-contant" id="content">
+   <span id="cancel-btn">X</span>
+
+  </div>
+
+</div>
+ <script src="./script.js"></script>
+<script>
+
+  
+</script> 
+</body>
+</html> -->
