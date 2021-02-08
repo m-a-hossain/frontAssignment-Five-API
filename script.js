@@ -46,7 +46,7 @@
                 const li= document.createElement('li')
                 
               li.innerHTML=`<li onclick=" getId(${foodId})">
-              <img  src="${foodImg}" width="100%" height="220">
+              <img  src="${foodImg}" width="100%" height="250">
               <p>${foodName}</p>
               </li>`
               ul.appendChild(li)
