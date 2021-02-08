@@ -4,9 +4,9 @@
               document.getElementsByClassName('section').style.display="none"
             }
       // function for found not food data ,html text show only 
-      function found(){
+      /* function found(){
         document.getElementsByClassName('section').style.display="block"
-      }
+      } */
 
 
      // main function for search food from API
