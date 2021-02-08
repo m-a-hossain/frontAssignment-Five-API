@@ -3,19 +3,14 @@
               document.getElementById('notFound').style.display="block"
               document.getElementsByClassName('section').style.display="none"
             }
-      // function for found not food data ,html text show only 
-      /* function found(){
-        document.getElementsByClassName('section').style.display="block"
-      } */
-
-
+    
      // main function for search food from API
       const searchFood =()=>{
                 let searchItem= document.getElementById('inputItem').value.trim()
                 const url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem}`
 
                 if(searchItem.length == 0){
-                  alert('plsea write a food name !!');
+                  alert('please write a food name !!');
                   return false
                   nothingFound();
                 }else{
@@ -25,7 +20,7 @@
                     // getting validation input 
                     if(data.meals){
                         displayFoods(data.meals)
-                        found()
+                      
                     }else{
                       nothingFound()
                     }
@@ -80,11 +75,11 @@
           `
           modalContent.appendChild(li)
 
-          foodIngredient.forEach(foodIngra =>{
+          foodIngredient.forEach(foodGradients =>{
              const ul=document.createElement('ul')
-             const newLI=  document.createElement('li')
-             newLI.innerText =foodIngra
-             ul.appendChild(newLI)
+             const newLi=  document.createElement('li')
+             newLi.innerText =foodGradients
+             ul.appendChild(newLi)
              modalContent.appendChild(ul)
           })
         })
