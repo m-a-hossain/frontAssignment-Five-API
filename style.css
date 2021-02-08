@@ -91,7 +91,8 @@ li img{
 #content li{
     list-style-type: none;
 }
-#cancel-btn{position: relative;
+#cancel-btn{
+    position: relative;
     font-size: 30px;
     z-index: 2;
     margin-left: 20px;
@@ -100,6 +101,7 @@ li img{
     position: relative;
     left: 53%;
     top:33%;
+    background-color: slategray;
 }
 #cancel-btn:hover{
     cursor: pointer;
